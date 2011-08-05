@@ -1,0 +1,13 @@
+{
+   "name": "YouTube Pauser",
+   "version": "1.0",
+   "description": "Extension to pause YouTube videos from different tabs",
+   "background_page": "background.html",
+   "browser_action": { 
+      "name": "Pause YouTube videos",
+      "default_icon": "icon.png"
+   },
+   "permissions": [
+      "tabs", "http://*/*", "https://*/*"
+   ]
+}

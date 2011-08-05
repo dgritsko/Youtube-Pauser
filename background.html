@@ -1,0 +1,15 @@
+<html>
+<head>
+<script>
+  // Called when the user clicks on the browser action.
+  chrome.browserAction.onClicked.addListener(function(tab) {
+    chrome.tabs.getAllInWindow(null, function(tabs) {
+       tabs.forEach(function(tab) {
+          chrome.tabs.executeScript(tab.id, {file: "jquery-1.6.2.min.js.js", allFrames: true});
+          chrome.tabs.executeScript(tab.id, {file: "content_script.js", allFrames: true});
+       });
+    });
+  });
+</script>
+</head>
+</html>
